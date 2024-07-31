@@ -57,6 +57,7 @@ body {
 }
 .nav-links-container .nav-bar {
     display: none;
+    font-size: 1.5rem;
 }
 .nav-links-container .nav-links {
     display: flex;
@@ -131,7 +132,7 @@ body {
 }
 .right-part .workout-video {
     top: 25%;
-    right: -10%;
+    right: -15%;
 }
 .right-part .video-tutorial {
     left: 25%;
@@ -147,4 +148,33 @@ body {
 }
 .right-part .workout-video h1 {
     font-size: 2.5rem;
+}
+
+/* Change Habit Section */
+
+
+
+
+
+
+/* making responsive for mobile device */
+@media screen and (max-width: 576px) {
+    .header-container {
+        padding: 1.25rem;
+    }
+    /* nav */
+    .nav-links-container .nav-links {
+        display: none;
+    }
+    .nav-links-container .nav-bar {
+        display: block;
+    }
+    /* heading banner container */
+    .heading-banner-container {
+        flex-direction: column;
+    }
+    .right-part .video-tutorial {
+        left: -10%;
+    }
+    /* change habit */
 }
