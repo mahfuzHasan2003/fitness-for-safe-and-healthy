@@ -32,14 +32,25 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+.section-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.section-margin-bottom {
+    margin-bottom: 6rem;
+}
+.text-center {
+    text-align: center;
+}
 
 /* ------------------------------------- */
 
 
 /* styles for header */
 .header-container {
-    padding: 2rem 0;
-    background-image: linear-gradient(180deg, rgba(17, 17, 17, 100), rgba(119, 119, 119, 0));
+    padding-top: 2rem;
+    background-image: linear-gradient(rgba(119, 119, 119, 0.4), rgb(0, 0, 0));
 }
 
 /* styles for navbar */
@@ -151,14 +162,37 @@ body {
 }
 
 /* Change Habit Section */
-
-
+.change-habit .habit-title-and-descrip {
+    max-width: 650px;
+    margin: 0 auto;
+}
+.change-habit .habits-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 3rem;
+}
+.habit-container .habit-profile {
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 0.5rem;
+}
+.habit-container .habit-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
 
 
 
 
 /* making responsive for mobile device */
 @media screen and (max-width: 576px) {
+
+    /* ------- */
+    .section-heading {
+        font-size: 2rem;
+    }
+    /* ------- */
+
     .header-container {
         padding: 1.25rem;
     }
@@ -173,8 +207,20 @@ body {
     .heading-banner-container {
         flex-direction: column;
     }
+    .right-part .workout-video {
+        right: 0;
+    }
     .right-part .video-tutorial {
-        left: -10%;
+        left: 0;
     }
     /* change habit */
+    .change-habit .habit-title-and-descrip {
+        padding: 0 1rem;
+    }
+    .change-habit .habits-group {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        max-width: 70%;
+        margin: 3rem auto 0 auto;
+    }
 }
