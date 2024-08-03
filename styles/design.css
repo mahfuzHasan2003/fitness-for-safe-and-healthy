@@ -231,7 +231,8 @@ body {
 .ui-parent .calculate-section {
     flex: 2;
 }
-.ui-parent .bmi-sec-heading {
+.ui-parent .bmi-sec-heading,
+.footer-container .top-flex-item .footer-sub-heading {
     font-size: 1.75rem;
     margin-bottom: 2rem;
 }
@@ -326,9 +327,6 @@ form button#form-btn {
 }
 
 /* Customer Review */
-.customer-review {
-  /* overflow: hidden; */
-}
 .customer-review .reviews-container {
   display: flex;
   align-items: center;
@@ -356,6 +354,8 @@ form button#form-btn {
   padding: 0 1.5rem 1.5rem;
   border-radius: 0.25rem;
   position: relative;
+  flex: 1;
+  min-height: 20rem;
 }
 .review .reviewer-profile {
   height: 8rem;
@@ -379,13 +379,54 @@ form button#form-btn {
   margin-bottom: 0.5rem;
 }
 
+/* Footer Section */
+.footer-container {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  gap: 5rem;
+  padding: 4rem 0;
+}
+.footer-container .top-flex-item .footer-sub-heading {
+  margin-bottom: 1rem;
+}
+.top-flex-item .our-logo {
+  font-size: 4rem;
+  font-style: italic;
+  margin-bottom: 1.25rem;
+}
+.top-flex-item ul {
+  list-style-type: none;
+}
+.top-flex-item ul li {
+  padding: 0.25rem 0;
+}
+.top-flex-item li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+}
+.top-flex-item li a:hover {
+  text-decoration: underline;
+}
+.footer-bottom {
+  padding-bottom: 1.5rem;
+}
+.footer-bottom .horizontal-line {
+  margin-bottom: 1.25rem ;
+  height: 0.15rem;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-bottom p {
+  font-size: 1.15rem;
+}
 
 
 
-
-
-
-
+/* --------------------------------------- */
 /* making responsive for mobile device */
 @media screen and (max-width: 576px) {
   html {
@@ -416,8 +457,12 @@ form button#form-btn {
   .change-habit .habit-title-and-descrip {
     padding: 0 1rem;
   }
-  .change-habit .habits-group {
+  .change-habit .habits-group,
+  .meet-our-team .team-profiles-container,
+  .footer-container .footer-top {
     grid-template-columns: 1fr;
+  }
+  .change-habit .habits-group {
     gap: 2rem;
     max-width: 70%;
     margin: 3rem auto 0 auto;
@@ -438,8 +483,14 @@ form button#form-btn {
     margin-left: 0;
   }
   /* BMI calculaor section */
-  .bmi-calculator .calculator-header {
+  .bmi-calculator .calculator-header,
+  .meet-our-team .team-title-and-descrip,
+  .meet-our-team .team-profiles-container,
+  .customer-review .review-title-and-descrip,
+  .customer-review .reviews-container,
+  .footer-container .footer-top-and-bottom {
     margin-left: 1.25rem;
+    margin-right: 1.25rem;
   }
   .calculator-ui-container .ui-parent {
     flex-direction: column;
@@ -450,6 +501,26 @@ form button#form-btn {
   }
   .calculate-section form {
     width: 100%;
-    /* overflow: hidden; */
+  }
+  /* Meet Our Team */
+  .meet-our-team .team-profiles-container {
+    height: 200vh;
+  }
+  /* Customer Review */
+  .customer-review .reviews-container .review:nth-child(1),
+  .customer-review .reviews-container .review:nth-child(2) {
+    display: none;
+  }
+  .reviews-container .review::before {
+    display: none;
+  }
+  /* Footer */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem 0;
+  }
+  .footer-bottom {
+    text-align: left;
   }
 }
