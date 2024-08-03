@@ -455,7 +455,7 @@ form button#form-btn {
   }
   /* change habit */
   .change-habit .habit-title-and-descrip {
-    padding: 0 1rem;
+    padding: 0 1.25rem;
   }
   .change-habit .habits-group,
   .meet-our-team .team-profiles-container,
